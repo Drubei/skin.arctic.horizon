@@ -665,14 +665,14 @@
             <top>-180</top>
             <bottom>-65</bottom>
             <control type="image">
-                <bottom>480</bottom>
-                <texture background="true" colordiffuse="cdffffff">common/vignette-home.png</texture>
+                <bottom>400</bottom><!-- fullscreen showcase overlay -->
+                <texture background="true" colordiffuse="cdffffff">common/vignette-home.png</texture><!-- fullscreen showcase overlay -->
                 <include>Animation_FadeInOut_Common</include>
             </control>
             <control type="image">
                 <bottom>0</bottom>
-                <height>480</height>
-                <texture colordiffuse="cdffffff">common/vignette-home-bottom.png</texture>
+                <height>400</height><!-- fullscreen showcase overlay -->
+                <texture colordiffuse="cdffffff">common/vignette-home-bottom.png</texture><!-- fullscreen showcase overlay -->
                 <include>Animation_FadeInOut_Common</include>
             </control>
         </control>
@@ -1503,7 +1503,7 @@
                     <height>70</height>
                     <align>center</align>
                     <aligny>center</aligny>
-                    <label>Arctic [COLOR=$VAR[ColorHighlight]]Horizon[/COLOR]</label>
+                    <label>NiNJA [COLOR="FF00bff3"]CiNEMA[/COLOR]</label>
                     <font>font_splash</font>
                     <textcolor>CDFFFFFF</textcolor>
                 </control>
@@ -1550,4 +1550,3 @@
         </control>
     </include>
 </includes>
-

@@ -486,7 +486,7 @@
                 <height>item_widget_details_height</height>
                 <control type="grouplist">
                     <top>7</top>
-                    <width>410</width>
+                    <width>500</width>
                     <left>100</left>
                     <bottom>90</bottom>
                     <orientation>vertical</orientation>
@@ -561,7 +561,7 @@
                 <control type="grouplist">
                     <top>7</top>
                     <right>100</right>
-                    <left>550</left>
+                    <left>650</left>
                     <bottom>90</bottom>
                     <orientation>vertical</orientation>
                     <itemgap>13</itemgap>
@@ -900,6 +900,8 @@
                     <font>font_tiny</font>
                     <textcolor>main_fg_70</textcolor>
                     <label>$PARAM[infolabel]</label>
+                    <!-- Overflow text scrolling -->
+                    <scroll>true</scroll>
                 </control>
             </control>
         </definition>

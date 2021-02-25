@@ -54,7 +54,13 @@
         <font>
             <name>font_fps</name>
             <filename>RobotoCondensed-Regular.ttf</filename>
-            <size>16</size>
+            <size>22</size>
+        </font>
+        <font>
+            <name>font_fps2</name>
+            <style>uppercase</style>
+            <filename>RobotoCondensed-Regular-Caps.ttf</filename>
+            <size>21</size>
         </font>
         <font>
             <name>font_osd_lang</name>
@@ -75,7 +81,7 @@
         <font>
             <name>font_unwatched</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>16</size>
+            <size>18</size>
         </font>
         <font>
             <name>font_mini</name>
@@ -108,9 +114,9 @@
         <font>
             <name>font_overlay_plotbox</name>
             <filename>Roboto-Regular-Linespacing.ttf</filename>
-            <linespacing>1.45</linespacing>
+            <linespacing>1.00</linespacing>
             <aspect>0.9</aspect>
-            <size>48</size>
+            <size>40</size>
         </font>
         <font>
             <name>font_info_display</name>
@@ -167,7 +173,7 @@
         <font>
             <name>font_overlay_title</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>100</size>
+            <size>60</size>
             <aspect>0.9</aspect>
             <style>bold</style>
         </font>

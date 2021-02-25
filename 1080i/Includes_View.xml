@@ -322,15 +322,15 @@
                         <texture>$VAR[Image_Overlay_Backing$PARAM[affix],,-fo-shadow.png]</texture>
                     </control>
                     <control type="image">
-                        <texture colordiffuse="$VAR[ColorHighlight]">$VAR[Image_Overlay_Backing$PARAM[affix],,-fo.png]</texture>
+                      <texture colordiffuse="$VAR[ColorPanelWhite]">$VAR[Image_Overlay_Backing$PARAM[affix],,-fo.png]</texture><!-- CHANGED  Indicator circle border-->
                     </control>
                     <control type="image">
                         <animation effect="fade" end="50" condition="true">Conditional</animation>
-                        <texture colordiffuse="$VAR[ColorGradient]">$VAR[Image_Overlay_Backing$PARAM[affix],,-fo.png]</texture>
+                        <texture colordiffuse="$VAR[ColorPanelWhite]">$VAR[Image_Overlay_Backing$PARAM[affix],,-fo.png]</texture><!-- CHANGED  Indicator circle border-->
                     </control>
                 </include>
                 <control type="image">
-                    <texture colordiffuse="ff333333">$VAR[Image_Overlay_Backing$PARAM[affix],,-bg.png]</texture>
+                  <texture colordiffuse="ff000000">$VAR[Image_Overlay_Backing$PARAM[affix],,-bg.png]</texture><!-- CHANGED  Background for progress circle color-->
                 </control>
                 <control type="image">
                     <include content="Defs_Pad"><param name="pad" value="-8" /></include>
@@ -374,20 +374,20 @@
             <control type="image">
                 <top>15</top>
                 <right>15</right>
-                <width>48</width>
-                <height>48</height>
+                <width>60</width><!-- CHANGED Corner indicador image size-->
+                <height>60</height><!-- CHANGED Corner indicador image size-->
                 <texture colordiffuse="$PARAM[bg_color]" border="10">$VAR[Image_Overlay_Backing$PARAM[affix],,.png]</texture>
             </control>
             <control type="image">
-                <top>16</top>
-                <right>16</right>
-                <width>24</width>
-                <height>24</height>
+              <top>18</top><!-- CHANGED Corner indicador progress/watched image size-->
+              <right>20</right><!-- CHANGED Corner indicador progress/watched image size-->
+              <width>26</width><!-- CHANGED Corner indicador progress/watched image size-->
+              <height>26</height><!-- CHANGED Corner indicador progress/watched image size-->
                 <texture colordiffuse="$PARAM[fg_color]">$VAR[Image_Overlay$PARAM[affix]]</texture>
             </control>
             <control type="label">
                 <top>15</top>
-                <right>15</right>
+                <right>18</right><!-- CHANGED -->
                 <width>28</width>
                 <height>28</height>
                 <font>font_unwatched</font>
@@ -421,7 +421,7 @@
             <include content="View_WatchedOverlay_Corner" condition="Skin.HasSetting(EnableClassicIndicators)">
                 <param name="affix" value="$PARAM[affix]" />
                 <param name="listitem" value="$PARAM[listitem]" />
-                <param name="bg_color" value="$VAR[ColorHighlight]" />
+                <param name="bg_color" value="$VAR[ColorPanelWhite]" /><!-- CHANGED Focus corner color-->
                 <param name="fg_color" value="ff000000" />
             </include>
             <include content="View_WatchedOverlay_Content" condition="!Skin.HasSetting(EnableClassicIndicators)">
@@ -429,6 +429,19 @@
                 <param name="listitem" value="$PARAM[listitem]" />
                 <param name="selected" value="true" />
             </include>
+            <!-- CHANGED ADDED START Focus corner content color -->
+            <control type="label">
+                <top>15</top>
+                <right>16</right>
+                <width>28</width>
+                <height>28</height>
+                <font>font_unwatched</font>
+                <align>center</align>
+                <textcolor>ff000000</textcolor>
+                <label>$INFO[$PARAM[listitem].Property(UnWatchedEpisodes)]</label>
+                <visible>Integer.IsGreater($PARAM[listitem].Property(UnWatchedEpisodes),0) + [String.IsEqual($PARAM[listitem].DBType,tvshow) | String.IsEqual($PARAM[listitem].DBType,season)] + !Skin.HasSetting(DisableIndicator.Episodes)</visible>
+              </control>
+            <!-- CHANGED END Focus corner content color -->
         </definition>
     </include>
     <include name="View_List_Selectbox">
@@ -501,11 +514,11 @@
                     <control type="image">
                         <bordersize>20</bordersize>
                         <bordertexture border="32" colordiffuse="Shadow">common/shadow-20.png</bordertexture>
-                        <texture border="20" colordiffuse="$PARAM[colordiffuse]">common/selectbox.png</texture>
+                        <texture border="20" colordiffuse="$PARAM[ColorPanelWhite]">common/selectbox.png</texture><!-- CHANGED Border focus color-->
                     </control>
                     <control type="image">
                         <bordersize>20</bordersize>
-                        <texture colordiffuse="$VAR[ColorGradient]" border="20">common/selectbox-gradient.png</texture>
+                        <texture colordiffuse="$VAR[ColorPanelWhite]" border="20">common/selectbox-gradient.png</texture><!-- CHANGED Border focus color-->
                         <visible>$PARAM[gradient]</visible>
                     </control>
                 </include>
@@ -519,4 +532,3 @@
     </include>
 
 </includes>
-

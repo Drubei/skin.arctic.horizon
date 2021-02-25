@@ -422,11 +422,11 @@
                     <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
                     <control type="image">
                         <bordersize>7</bordersize>
-                        <texture border="10" colordiffuse="$VAR[ColorHighlight]">common/box.png</texture>
+                        <texture border="10" colordiffuse="$VAR[ColorPanelWhite]">common/box.png</texture><!-- CHANGED -->
                     </control>
                     <control type="image">
                         <bordersize>7</bordersize>
-                        <texture border="10" colordiffuse="$VAR[ColorGradient]">common/box-gradient-vertical.png</texture>
+                        <texture border="10" colordiffuse="$VAR[ColorPanelWhite]">common/box-gradient-vertical.png</texture><!-- CHANGED -->
                     </control>
                 </include>
                 <!-- Image -->
@@ -744,11 +744,11 @@
                         <bottom>-$PARAM[textbox-height]</bottom>
                         <control type="image">
                             <bordersize>7</bordersize>
-                            <texture border="10" colordiffuse="$VAR[ColorHighlight]">common/box.png</texture>
+                            <texture border="10" colordiffuse="$VAR[ColorPanelWhite]">common/box.png</texture><!-- CHANGED Inside Lanscape bg -->
                         </control>
                         <control type="image">
                             <bordersize>7</bordersize>
-                            <texture border="10" colordiffuse="$VAR[ColorGradient]">common/box-gradient-vertical.png</texture>
+                            <texture border="10" colordiffuse="$VAR[ColorPanelWhite]">common/box-gradient-vertical.png</texture><!-- CHANGED Inside Lanscape bg -->
                         </control>
                     </include>
                     <include condition="$PARAM[selectbox] + !$PARAM[textpanel]" content="View_Selectbox">
@@ -760,11 +760,11 @@
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
                         <control type="image">
                             <bordersize>7</bordersize>
-                            <texture border="10" colordiffuse="$VAR[ColorHighlight]">common/box.png</texture>
+                            <texture border="10" colordiffuse="$VAR[ColorPanelWhite]"></texture><!-- CHANGED Inside Lanscape bg -->
                         </control>
                         <control type="image">
                             <bordersize>7</bordersize>
-                            <texture border="10" colordiffuse="$VAR[ColorGradient]">common/box-gradient-vertical.png</texture>
+                            <texture border="10" colordiffuse="$VAR[ColorPanelWhite]"></texture><!-- CHANGED Inside Lanscape bg -->
                         </control>
                     </include>
                     <include content="Object_Artwork">
@@ -787,11 +787,11 @@
                         <height>58</height>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
                         <control type="image">
-                            <texture colordiffuse="$VAR[ColorHighlight]">$VAR[Image_Overlay_Backing$PARAM[affix],,-half-fo.png]</texture>
+                          <texture colordiffuse="$VAR[ColorPanelWhite]">$VAR[Image_Overlay_Backing$PARAM[affix],,-half-fo.png]</texture>
                         </control>
                         <control type="image">
                             <animation effect="fade" end="40" condition="true">Conditional</animation>
-                            <texture colordiffuse="$VAR[ColorGradient]">$VAR[Image_Overlay_Backing$PARAM[affix],,-half-fo.png]</texture>
+                            <texture colordiffuse="$VAR[ColorPanelWhite]">$VAR[Image_Overlay_Backing$PARAM[affix],,-half-fo.png]</texture>
                         </control>
                     </include>
                     <include condition="!Skin.HasSetting(DisableWatchedOverlay)" content="View_WatchedOverlay">
@@ -835,8 +835,8 @@
                     </include>
                     <include content="$PARAM[label-include]" description="Focused" condition="!Skin.HasSetting(EnableMonochromeHighlight) + $PARAM[textpanel]">
                         <param name="visible" value="[Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])] + $PARAM[selectbox]" />
-                        <param name="textcolor_100" value="panel_fg_100" />
-                        <param name="textcolor_70" value="panel_fg_70" />
+                        <param name="textcolor_100" value="PanelTextBlack100" /><!-- CHANGED Panel text color focus-->
+                        <param name="textcolor_70" value="PanelTextBlack70" /><!-- CHANGED Panel text color focus-->
                         <param name="affix" value="$PARAM[affix]" />
                         <param name="listitem" value="$PARAM[listitem]" />
                     </include>
@@ -2378,4 +2378,3 @@
         </definition>
     </include>
 </includes>
-

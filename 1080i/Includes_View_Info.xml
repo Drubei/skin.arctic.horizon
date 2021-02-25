@@ -9,7 +9,7 @@
                 <nested/>
                 <include content="Object_Info_Plot">
                     <param name="height" value="100%" />
-                    <param name="title" value="[B][COLOR=main_fg_100]$PARAM[episodetitle][/COLOR][/B]  ~  " />
+                    <param name="title" value="[B][COLOR=main_fg_100]$PARAM[episodetitle][/COLOR][/B][CR]" /> <!-- Line break in episode title -->
                     <param name="label" value="$PARAM[plot]" />
                     <param name="control-type" value="textbox" />
                     <top>0</top>
@@ -196,4 +196,3 @@
     </include>
 
 </includes>
-
