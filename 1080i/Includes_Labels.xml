@@ -14,7 +14,7 @@
     </variable>
 
     <variable name="Label_BackgroundPicture_InfoLine">
-        <value>$INFO[System.FriendlyName,  |  [COLOR=main_fg_100],[/COLOR]]  |  [COLOR=main_fg_100]Arctic NiNJA $INFO[System.AddonVersion(skin.arctic.horizon)][/COLOR]</value>
+        <value>$INFO[System.FriendlyName,  |  [COLOR=main_fg_100],[/COLOR]]  |  [COLOR=main_fg_100]Arctic Horizon $INFO[System.AddonVersion(skin.arctic.horizon)][/COLOR]</value>
     </variable>
 
     <variable name="Label_SkinSettings_HomeStyle">
@@ -118,7 +118,7 @@
 
         <value condition="Window.IsVisible(VideoFullScreen.xml)">$INFO[Container(56560).ListItemAbsolute(0).Property(Year),  |  [COLOR=main_fg_100],[/COLOR]]$INFO[Container(56560).ListItemAbsolute(0).Property(MPAA),  |  [COLOR=main_fg_100],[/COLOR]]$VAR[Label_56560_Duration,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[Container(56560).ListItemAbsolute(0).Property(EndTime),  |  [COLOR=main_fg_100]$LOCALIZE[31207] ,[/COLOR]]</value>
 
-        <value condition="String.IsEmpty(Container(56560).ListItem.Property(DBType))">$INFO[System.FriendlyName,  |  [COLOR=main_fg_100],[/COLOR]]  |  [COLOR=main_fg_100]Arctic NiNJA $INFO[System.AddonVersion(skin.arctic.horizon)][/COLOR]</value>
+        <value condition="String.IsEmpty(Container(56560).ListItem.Property(DBType))">$INFO[System.FriendlyName,  |  [COLOR=main_fg_100],[/COLOR]]  |  [COLOR=main_fg_100]Arctic Horizon $INFO[System.AddonVersion(skin.arctic.horizon)][/COLOR]</value>
 
         <value>  |  [COLOR=main_fg_100]$LOCALIZE[19055][/COLOR]</value>
     </variable>
@@ -168,7 +168,7 @@
 
         <value condition="[!String.IsEmpty(ListItem.ChannelNumberLabel) | Window.IsVisible(DialogPVRInfo.xml)] + Control.HasFocus(9400) + [!String.IsEmpty(ListItem.ChannelName) | !String.IsEmpty(ListITem.StartTime)]">$INFO[ListItem.ChannelName,  |  [COLOR=main_fg_100],[/COLOR]]$VAR[Label_PVR_EpisodeName,  |  [COLOR=main_fg_100],[/COLOR]]$VAR[Label_PVR_EPGEventTitle,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.NextStartTime,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.NextEndTime,[COLOR=main_fg_100] - ,[/COLOR]]</value>
 
-        <value condition="String.IsEmpty(ListItem.DBType) + String.IsEmpty(ListItem.ChannelNumberLabel) + String.IsEmpty(ListItem.ChannelName) + String.IsEmpty(ListItem.Title) + String.IsEmpty(ListItem.TVShowTitle) + String.IsEmpty(ListItem.AddonVersion)">$INFO[System.FriendlyName,  |  [COLOR=main_fg_100],[/COLOR]]  |  [COLOR=main_fg_100]Arctic NiNJA $INFO[System.AddonVersion(skin.arctic.horizon)][/COLOR]</value>
+        <value condition="String.IsEmpty(ListItem.DBType) + String.IsEmpty(ListItem.ChannelNumberLabel) + String.IsEmpty(ListItem.ChannelName) + String.IsEmpty(ListItem.Title) + String.IsEmpty(ListItem.TVShowTitle) + String.IsEmpty(ListItem.AddonVersion)">$INFO[System.FriendlyName,  |  [COLOR=main_fg_100],[/COLOR]]  |  [COLOR=main_fg_100]Arctic Horizon $INFO[System.AddonVersion(skin.arctic.horizon)][/COLOR]</value>
 
         <value>  |  [COLOR=main_fg_100]$LOCALIZE[19055][/COLOR]</value>
     </variable>
