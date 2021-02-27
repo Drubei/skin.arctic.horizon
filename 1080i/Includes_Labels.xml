@@ -14,8 +14,8 @@
     </variable>
 
     <variable name="Label_BackgroundPicture_InfoLine">
-        <value>$INFO[System.FriendlyName,  |  [COLOR=main_fg_100],[/COLOR]]  |  [COLOR=main_fg_100]Arctic Horizon $INFO[System.AddonVersion(skin.arctic.horizon)][/COLOR]</value>
-    </variable>
+        <value>$INFO[System.FriendlyName,  |  [COLOR=main_fg_100],[/COLOR]]  |  [COLOR=main_fg_100]Arctic NiNJA $INFO[System.AddonVersion(skin.arctic.horizon)][/COLOR]</value>
+    </variable> <!-- CHANGED Addon browser details -->
 
     <variable name="Label_SkinSettings_HomeStyle">
         <value condition="Skin.HasSetting(EnableHorizontalHome)">$LOCALIZE[31261]</value>
