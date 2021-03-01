@@ -96,7 +96,7 @@
         <orientation>horizontal</orientation>
         <usecontrolcoords>true</usecontrolcoords>
     </include>
-    <include name="OSD_Video_Seekbar_Left_Drubei"><left>180</left></include><!-- gap space between poster and info -->
+<!-- gap space between poster and info <include name="OSD_Video_Seekbar_Left_Drubei"><left>180</left></include> -->
     <include name="OSD_Video_Seekbar_Left"><left>360</left></include>
     <include name="OSD_Video_Seekbar_Right"><right>360</right></include>
 
@@ -139,10 +139,10 @@
                     <!-- Artwork -->
                     <control type="group">
                         <!-- <right>0</right> -->
-                        <bottom>-15</bottom><!-- CHANGED poster size -->
-                        <align>bottom</align><!-- CHANGED poster size -->
-                        <width>133</width><!-- CHANGED poster size -->
-                        <height>200</height><!-- CHANGED video poster size-->
+                        <bottom>0</bottom><!-- CHANGED (-15) poster size -->
+                        <!-- CHANGED <align>bottom</align> poster size -->
+                        <width>320</width><!-- CHANGED (133) poster size -->
+                        <height>480</height><!-- CHANGED (200) video poster size-->
                         <control type="image">
                             <include content="Defs_Pad">
                                 <param name="pad" value="-20" />
@@ -156,7 +156,8 @@
                     </control>
                     <!-- Info -->
                     <control type="grouplist">
-                        <include condition="!String.IsEmpty(Player.Art(poster)) | !String.IsEmpty(Player.Art(tvshow.poster)) | !String.IsEmpty(MusicPlayer.Cover)">OSD_Video_Seekbar_Left_Drubei</include>
+                      <include condition="!String.IsEmpty(Player.Art(poster)) | !String.IsEmpty(Player.Art(tvshow.poster)) | !String.IsEmpty(MusicPlayer.Cover)">OSD_Video_Seekbar_Left</include>
+                        <!-- <include condition="!String.IsEmpty(Player.Art(poster)) | !String.IsEmpty(Player.Art(tvshow.poster)) | !String.IsEmpty(MusicPlayer.Cover)">OSD_Video_Seekbar_Left_Drubei</include> -->
                         <usecontrolcoords>true</usecontrolcoords>
                         <bottom>-7</bottom>
                         <right>0</right>
@@ -217,7 +218,7 @@
                                     <texture colordiffuse="panel_fg_100">flags/$VAR[Defs_ColorMode_Dir]/source/$INFO[VideoPlayer.VideoCodec,,.png]</texture>
                                     <visible>!String.IsEmpty(VideoPlayer.VideoCodec)</visible>
                                 </control>
-                                <!-- CHANGED REMOVED <control type="group">
+                                <control type="group"> <!-- CHANGED (REMOVED) -->
                                     <width>71</width>
                                     <height>48</height>
                                     <centertop>50%</centertop>
@@ -235,7 +236,7 @@
                                         <align>center</align>
                                         <aligny>center</aligny>
                                     </control>
-                                </control> -->
+                                </control>
                                 <control type="image">
                                     <fadetime>100</fadetime>
                                     <centertop>50%</centertop>
@@ -276,7 +277,7 @@
 
                         <control type="textbox">
                             <top>15</top>
-                            <height max="80">auto</height><!-- CHANGED video description info -->
+                            <height max="125">auto</height><!-- CHANGED (80) video description info -->
                             <font>font_plotbox</font>
                             <textcolor>panel_fg_70</textcolor>
                             <label>$INFO[VideoPlayer.Plot,, ]$INFO[MusicPlayer.Property(Artist_Description),, ]$INFO[MusicPlayer.Property(Album_Description)]</label>
